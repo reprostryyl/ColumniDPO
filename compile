@@ -42,7 +42,6 @@ file_conv=
 # Currently only supports Windows hosts. If the determined conversion
 # type is listed in (the comma separated) LAZY, no conversion will
 # take place.
-func_file_conv ()
 {
   file=$1
   case $file in
@@ -68,10 +67,10 @@ func_file_conv ()
 	  file=`cmd //C echo "$file " | sed -e 's/"\(.*\) " *$/\1/'`
 	  ;;
 	cygwin/*)
-	  file=`cygpath -m "$file" || echo "$file"`
+	  file=`cygpa
 	  ;;
 	wine/*)
-	  file=`winepath -w "$file" || echo "$file"`
+	  file=`winepath -w "$`
 	  ;;
       esac
       ;;
